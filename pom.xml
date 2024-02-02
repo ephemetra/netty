@@ -418,24 +418,24 @@
     </profile>
 
     <!-- JDK11 -->
-    <profile>
-      <id>java11</id>
-      <activation>
-        <jdk>11</jdk>
-      </activation>
-      <properties>
-        <argLine.java9.extras />
-        <!-- Export some stuff which is used during our tests -->
-        <argLine.java9>--illegal-access=deny ${argLine.java9.extras}</argLine.java9>
-        <!-- Not use alpn agent as Java11+ supports alpn out of the box -->
-        <argLine.alpnAgent />
-        <forbiddenapis.skip>true</forbiddenapis.skip>
-        <!-- 1.4.x does not work in Java10+ -->
-        <jboss.marshalling.version>2.0.5.Final</jboss.marshalling.version>
-        <!-- pax-exam does not work on latest Java11 build -->
-        <skipOsgiTestsuite>true</skipOsgiTestsuite>
-      </properties>
-    </profile>
+<!--    <profile>-->
+<!--      <id>java11</id>-->
+<!--      <activation>-->
+<!--        <jdk>11</jdk>-->
+<!--      </activation>-->
+<!--      <properties>-->
+<!--        <argLine.java9.extras />-->
+<!--        &lt;!&ndash; Export some stuff which is used during our tests &ndash;&gt;-->
+<!--        <argLine.java9>&#45;&#45;illegal-access=deny ${argLine.java9.extras}</argLine.java9>-->
+<!--        &lt;!&ndash; Not use alpn agent as Java11+ supports alpn out of the box &ndash;&gt;-->
+<!--        <argLine.alpnAgent />-->
+<!--        <forbiddenapis.skip>true</forbiddenapis.skip>-->
+<!--        &lt;!&ndash; 1.4.x does not work in Java10+ &ndash;&gt;-->
+<!--        <jboss.marshalling.version>2.0.5.Final</jboss.marshalling.version>-->
+<!--        &lt;!&ndash; pax-exam does not work on latest Java11 build &ndash;&gt;-->
+<!--        <skipOsgiTestsuite>true</skipOsgiTestsuite>-->
+<!--      </properties>-->
+<!--    </profile>-->
 
     <!-- JDK10 -->
     <profile>
